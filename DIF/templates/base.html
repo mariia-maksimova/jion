@@ -1,0 +1,206 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Главная страница</title>
+	<link rel="stylesheet" href="{% static "DIF/css/main.css" %}" type="text/css"/>
+</head>
+<body>
+
+<div class="front">
+	<div class="container">
+
+		<div class="top-menu">
+			<ul>
+				<a href="#income"><li>Доходность</li></a>
+				<a href="#portfolio"><li>Портфель</li></a>
+				<a href="#news"><li>Новости</li></a>
+				<a href="#team"><li>Команда</li></a>
+				<a href="#contacts"><li>Контакты</li></a>
+			</ul>
+			<a href="/login"><div class="personal-account">Личный кабинет</div></a>
+		</div>
+		<div class="Logo3"></div>
+		<div class="logo"></div>
+		<p><span class="jion">Jion</span> Capital презентует <span>ETF</span> криптовалютного рынка, который представлен в виде открытого инвестиционного портфеля. Динамика доходности отображается на сайте в реальном времени вместе со структурой портфеля.</p>
+		<p>Набор активов и их доли выбраны после проведения анализа рынка с применением собственных способов формирования портфеля на высоковолатильном рынке. Состав инвестиционного портфеля и доли каждой криптовалюты доступны на сайте. Структура портфеля <span>периодически</span> корректируется исходя из стратегии средне- и долгосрочного инвестирования.</p>
+		<p>Диверсификация портфеля позволяет <span>снижать инвестиционные риски и максимизировать прибыль</span> для инвестора. Доходность нашего ETF превышает доходность биткоина, что доказывает эффективность стратегии.</p>
+		<p><span>Еженедельно</span> публикуется анализ криптовалютного рынка.</p>
+	</div>
+
+	<div class="lang">
+		<a href="#"><div class="rus"></div></a>
+		<a href="#"><div class="eng"></div></a>
+		<a href="#"><div class="chi"></div></a>
+	</div>
+
+	<div class="indexes">
+		<div class="income">
+			<span>18 017%</span>
+			<div class="white-line"></div>
+			<p>Доход в $ c 01.01.2017</p>
+		</div>
+		<div class="income">
+			<span>20 525%</span>
+			<div class="white-line"></div>
+			<p>Доход в ETH c 01.01.2017</p>
+		</div>
+		<div class="income">
+			<span>1 696 %</span>
+			<div class="white-line"></div>
+			<p>Доход в BTC c 01.01.2017</p>
+		</div>
+	</div>
+</div>
+
+<div class="dinamics">
+	<div class="container">
+		<a name="income"></a>
+		<h2>Динамика доходности ETF</h2>
+		<div class="graph"></div>
+		<a href="#" class="invest"><div class="invest">Начать инвестировать</div></a>
+	</div>
+</div>
+
+<div class="current">
+	<div class="container">
+		<a name="portfolio"></a>
+		<h2>Текущий состав портфеля</h2>
+		<p>Некоторые доли скрыты. Вы их сможете увидеть через месяц </br><span>(на период 01.02.2018 - 01.03.2018)</span></p>
+		<ul class="left">
+			<li class="bitcoin"><div class="load"></div>Bitcoin</li>
+			<li class="nem"><div class="value">10%</div>NEM</li>
+			<li class="dash"><div class="load"></div>Dash</li>
+			<li class="pivx"><div class="value">10%</div>PIVX</li>
+		</ul>
+		<ul class="middle">
+			<li class="litecoin"><div class="value">10%</div>Litecoin</li>
+			<li class="decred"><div class="value">10%</div>Decred</li>
+			<li class="dogecoin"><div class="value">10%</div>Dogecoin</li>
+			<li class="monero"><div class="load"></div>Monero</li>
+		</ul>
+		<ul class="right">
+			<li class="ethereum"><div class="load"></div>Ethereum</li>
+			<li class="zcash"><div class="load"></div>Zcash</li>
+			<li class="ethereum-classic"><div class="load"></div>Ethereum</br> Classic</li>
+			<li class="reserved"><div class="load"></div>Zcash</li>
+		</ul>
+	</div>
+</div>	
+
+<div class="historic">
+	<div class="container">
+		<h2>Исторический состав портфеля</h2>
+		<div class="period">Период<select></select></div>
+		<ul class="left">
+			<li class="bitcoin"><div class=value>10%</div>Bitcoin</li>
+			<li class="nem"><div class="value">10%</div>NEM</li>
+			<li class="dash"><div class="value">10%</div>Dash</li>
+			<li class="pivx"><div class="value">10%</div>PIVX</li>
+		</ul>
+		<ul class="middle">
+			<li class="litecoin"><div class="value">10%</div>Litecoin</li>
+			<li class="decred"><div class="value">10%</div>Decred</li>
+			<li class="dogecoin"><div class="value">10%</div>Dogecoin</li>
+			<li class="monero"><div class="value">10%</div>Monero</li>
+		</ul>
+		<ul class="right">
+			<li class="ethereum"><div class="value">10%</div>Ethereum</li>
+			<li class="zcash"><div class="value">10%</div>Zcash</li>
+			<li class="ethereum-classic"><div class="value">10%</div>Ethereum</br> Classic</li>
+			<li class="reserved"><div class="value">10%</div>Zcash</li>
+		</ul>
+	</div>
+</div>	
+
+<div class="investment">
+	<div class="container">
+		<h2>Процесс инвестирования</h2>
+		<p>Вложения в ETF осуществляются в Личном Кабинете инвестора на сайте Jion Capital.</br>Просто, как раз-два-три.</p>
+		<div class="scheme">
+			<div class="first">Регистрация на сайте</div>
+			<div class="second">Прохождение процедуры <span>KYC</span></br> в Личном Кабинете</div>
+			<div class="management-fee">Комиссия</br>2%</br> за управление</div>
+			<div class="third">Вложение в Jion Capital</br>=</br><span>перевод эфира в фонд</span></div>
+			<div class="fourth">Отслеживание доходности</div>
+			<div class="success-fee">Комиссия</br>18%</br> за управление</div>
+			<div class="fifth">Возможность вывести средства</br><span>в любой момент</span></br>=</br>оформление заявки</br>на вывод средств</div>
+		</div>
+		<a href="#" class="invest"><div class="invest">Начать инвестировать</div></a>
+	</div>
+</div>
+
+<div class="premium">
+	<div class="container">
+		<h2>Премиальное обслуживание</h2>
+		<p>Если Вы собираетесь инвестировать более <span>10 000 $</span>, то можете специально предепредить нас об этом.</p>
+		<p>В этом случае Вы получите <span>премиальные</span> условия обсуживания - <span>сниженную комиссию</span> за управление средствами и <span>приоритетные сроки</span> исполнения заявок на вывод средств.</p>
+		<p>Оставьте свои контактные данные и сумму, которую Вы собираетесь инвестировать. Мы с Вами свяжемся.</p>
+		<form action="" method="get">
+			<div class="input-left">
+			   	<label>Email*</label>
+		      	<input type="email" required>
+		      	<label>ФИО*</label>
+		      	<input type="text" required>
+	      	</div>
+	      	<div class="input-right">
+	       	<label>Телефон</label>
+		      	<input type="text">
+		      	<label>Сумма для инвестиций в USD*</label>
+		      	<input type="text" required>
+			</div>
+		   	<p class="note">* - обязательное поле</p>
+		   	<input type="submit" value="Отправить заявку">
+		</form>
+	</div>
+</div>
+
+<div class="news">
+	<div class="container">
+		<a name="news"></a>
+		<h2>Новости</h2>
+		<button class="forward"></button>
+			<div class="post">
+				<div class="picture"></div>
+				<h3>Заголовок</h3>
+				<p>Текст новости Текст новости</br>Текст новости Текст новости</p>
+			</div>
+			<div class="post">
+				<div class="picture"></div>
+				<h3>Заголовок</h3>
+				<p>Текст новости Текст новости</br>Текст новости Текст новости</p>
+			</div>
+		<button class="backwards"></button>
+	</div>
+</div>
+
+<div class="team">
+	<div class="container">
+		<a name="team"></a>
+		<h2>Команда проекта</h2>
+		<div id="team">
+			<div id="ceo"><span>Александр Мухин</span></br>CEO & Founder</div>
+			<div id="developer"><span>Мария Максимова</span></br>Ведущий разработчик</div>
+			<div id="analyst-first"><span>Денис Лопушанский</span></br>Аналитик</div>
+			<div id="analyst-second"><span>Виктор Куликов</span></br>Аналитик</div>
+		</div>
+	</div>
+</div>
+
+<div class="contacts">
+	<div class="container">
+		<a name="contacts"></a>
+		<h2>Контакты</h2>
+		<div class="telegram">
+			<p>Канал в Telegram</p>
+			<p>Чат в Telegram</p>
+		</div>
+		<div class="mail">E-mail</div>
+		<div class="rules">Запрещается распространять и/или использовать информацию данного веб-сайта на территории Соединённых Штатов Америки (включая территории, находящихся во владении США), Китайской Народной Республике, Республике Сингапур или в любой юрисдикции или страны, где такое распространение и/или использование противоречит закону или регулированию или содержится, или будет содержаться в любом законодательстве или регулировании, которое может подвергать Jion Capital и/или лиц (включая партнеров и аффилированных лиц), к любой регистрации, лицензированию, требованию авторизации или другим требованиям, применяемым в пределах подобных юрисдикциях или странах.</br>Запрещается переводить средства на криптовалютные кошельки Jion Capital, которые в том числе размещены на данном сайте, гражданам Соединённых Штатов Америки (включая граждан территорий, находящихся во владении США), Китайской Народной Республике, Республике Сингапур, лицам, связанным рабочими отношениями с физическими или юридическими лицами перечисленных стран.</br>Запрещается переводить средства на криптовалютные кошельки Jion Capital, которые в том числе размещены на данном сайте, если хотя бы один из владельцев компании (или любой организации), в которой лицо, которое перевело эфир в Jion Capital, является должностным лицом, является гражданином или резидентом Соединённых Штатов Америки (включая граждан территорий, находящихся во владении США), Китайской Народной Республике, Республике Сингапур.</br>Лицо, которое перевело средства в Jion Capital, гарантирует, что основное место жительство или юридический адрес владельцев компании или любой организации), в которой данное лицо является должностным лицом, не находится в Соединённых Штатов Америки (включая территории, находящихся во владении США).</br>Бремя соблюдения законодательства страны или юрисдикции в сфере покупки/хранения/использования криптовалют илиинвестирования в них гражданином или резидентом, которым является пользователь данного сайта, лежит целиком и полностью на пользователе данного сайта.</br> При предоставлении ложных данных для процедуры KYC Jion Capital может отказать в праве вложения средств. При введении Jion Capital в заблужение относительно предоставлении объективной информации о лице, которое переводит средства в Jion Capital, данное лицо несет всю полноту ответственности за подобные действия, которая предусмотрена в любой юрисдикции. Jion Capital может отказать любому лицу во вложении средств без объяснения причин.</br>Все переводы осуществляются только в криптовалюте - в эфире.</br>Содержание данного веб-сайта предназначено только для общих информационных целей и не является привлечением к инвестированию, покупке или предложением о продаже ценных бумаг. Этот веб-сайт предназначен только для общего ознакомления. Информация на данном веб-сайте не является и не подразумевает под собой профессиональный совет по инвестициям, рекомендацию или независимый анализ. Информация на данном веб-сайте не была подготовлена в соответствии с существующими правилами и положениями, предусмотренными для подобных публикаций в различных юрисдикциях. Все средства, вложенные в любые криптовалюты, вложенные покупку криптовалют в долях, приведенных на данном сайте, вложенные  в построение инвестиционного криптовалютного портфеля, могут быть потеряны. Все средства, вложенные в Jion Capital, переведенные в Jion Capital, могут быть потеряны. Лицо, которое переводит средства в Jion Capital, понимает всю риски, связанные с данным действием - в том числе риск полной потери средств. Команда проекта Jion Capital и все связанные с проектом и аффилированные лица не несут ответственности за потерю средств лиц, которые перевели свои средства и свой эфир на криптовалютные кошельки Jion Capital на свой страх и риск, и не рискуют своими средствами.
+		</div>
+		<div class="footer">© Jion Capital, 2018</div>
+	</div>
+</div>
+
+</body>

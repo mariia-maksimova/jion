@@ -1,0 +1,65 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вход в личный кабинет</title>
+	<link rel="stylesheet" href="{% static "DIF/css/form.css" %}" type = "text/css" />
+</head>
+<body>
+	<div class="header">
+		<div class="top-panel">
+			<ul>
+				<li class="tel"></li>
+				<li class="mail"></li>
+			</ul>
+		</div>
+		<div class="menu">
+			<ul>
+				<a href="#"><li>English</li></a>
+				<li class="lang"><a href="#"></a></li>
+			</ul>
+			<a href="#"><div class="logo"></div></a>
+			<a href="#"><div class="reg">Регистрация</div></a>
+			<div class="enter">Вход</div>
+		</div>
+	</div>
+{% block content %}
+	<div class="main">
+		<div class="main-inner">
+			Войти
+			<div class="line"></div>
+			<div class=form>
+				<form method="post" action="/loggedin/">
+				{% csrf_token %}
+                {% if form.errors %}
+                    <p class="label label-danger">
+			Неверный логин или пароль!
+                    </p>
+                {% endif %}
+			        <div class="email">
+	        			<label for="name">Email</label>
+	      				<input type="email" name="email" required>
+	    			</div>
+	    			<div class="password">
+	        			<label for="password">Пароль</label>
+	      				<input type="password" name="password" required>
+	    			</div>	
+
+	    			<div class="reminder">
+	    				<a href="#">Забыли пароль?</a>
+	    				<div class="reminder-line"></div>
+	    			</div>
+				<button type="submit">Авторизоваться</button>
+				</form>
+			</div>
+			<ul>
+				<li>У вас нет учетной записи?</li>
+				<li><a href="/register/">Зарегистрироваться!</a></li>
+			</ul>				
+			<div class="reg-line"></div>
+		</div>
+	</div>
+
+{% endblock %}
+</body>

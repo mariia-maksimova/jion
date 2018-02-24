@@ -1,0 +1,54 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Вход в личный кабинет</title>
+	<link rel="stylesheet" href="{% static "DIF/css/form.css" %}" type = "text/css" />
+</head>
+<body>
+
+	<div class="header">
+		<a href="main.html"><div class="logo"></div></a>
+		<div class="lang">
+			<a href="#"><div class="rus"></div></a>
+			<a href="#"><div class="eng"></div></a>
+			<a href="#"><div class="chi"></div></a>
+		</div>
+		<a href="#"><div class="reg">Регистрация</div></a>
+	</div>
+
+{% block content %}
+	<div class="main">
+		<div class="auto">Авторизация</div>		
+		<div class=form>
+			<form method="post" action="/loggedin/">
+				{% csrf_token %}
+                {% if form.errors %}
+                    <p class="label label-danger">
+			Неверный логин или пароль!
+                    </p>
+                {% endif %}
+				<div class="email">
+	        		<label for="name">Email</label>
+	      			<input type="email" name="email" required>
+	    		</div>
+	    		<div class="password">
+	        		<label for="password">Пароль</label>
+	      			<input type="password" name="password" required>
+	    		</div>
+				<div class="autorize">
+	    		<input type="submit" value = "Войти">
+	    		</div>
+			</form>
+		</div>
+	
+		<ul>
+			<li>Нет учетной записи?</li>
+			<li><a href="/register/">Зарегистрироваться!</a></li>
+		</ul>				
+	</div>
+
+{% endblock %}
+
+</body>

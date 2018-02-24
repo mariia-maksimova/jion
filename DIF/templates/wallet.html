@@ -1,0 +1,545 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Электронный кошелек</title>
+	<link rel="stylesheet" href="{% static "DIF/css/wallet.css" %}" type="text/css"/>
+	<script type="text/javascript" src="{% static "DIF/js/web3-light.js" %}"></script>
+	<script type="text/javascript">
+
+if (typeof web3 !== 'undefined') {
+  web3 = new Web3(web3.currentProvider);
+} else {
+  // set the provider you want from Web3.providers
+  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+}
+
+abi =[
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "new_session",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"name": "totalSupply",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "inpriceOf",
+		"outputs": [
+			{
+				"name": "inprice",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tokens",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawTokens",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_RATE",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_totalSupply",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_address",
+				"type": "bytes"
+			}
+		],
+		"name": "bytesToAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "yes",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "_ETHsupply",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"name": "balance",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "RefundtoOwner",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "symbol",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "contract_address",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "end_of_session",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "createTokens",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newRate",
+				"type": "uint256"
+			}
+		],
+		"name": "setRATE",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "stop_money",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "fallback"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "_from",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
+		"name": "Transfer",
+		"type": "event"
+	}
+];
+// creation of contract object
+var MyContract = web3.eth.contract(abi);
+
+// initiate contract for an address
+var myContractInstance = MyContract.at('0xF8B2a71932aD65454FA7610b571caF94f4783c5f');
+
+
+web3.eth.getAccounts(function(error, accounts) {
+    if(!error)	{
+	var account = accounts[0];
+
+
+	myContractInstance.balanceOf.call(account,function(error, result){
+  	  if(!error){
+		var balance = result.c[0]/10000;
+	      	document.getElementById("balance").innerHTML = balance;
+			myContractInstance._RATE.call(function(error, result){
+			    if(!error){
+				var rate = result.c[0];
+ 			        document.getElementById("ratenow_in").innerHTML = rate;
+				document.getElementById("ratenow_out").innerHTML = rate;
+				document.getElementById("pricenow").innerHTML = 1/rate;
+				var wholepricenow = balance * 1/rate;
+				document.getElementById("wholepricenow").innerHTML = wholepricenow;
+					myContractInstance.inpriceOf.call(account,function(error, result){
+				  	  if(!error){
+				//	      document.getElementById("inrate").innerHTML = result.c[0];
+					      document.getElementById("inprice").innerHTML = 1/result.c[0];
+					      document.getElementById("wholeinprice").innerHTML = balance * 1/result.c[0];
+						var percchange = wholepricenow  / (balance * 1/result.c[0]) * 100 - 100;
+						var abschange = wholepricenow  - balance * 1/result.c[0];
+						
+						if (percchange > 0 && abschange > 0) {
+					     	 document.getElementById("percchange").innerHTML = "+"+percchange;
+					     	 document.getElementById("abschange").innerHTML = "+"+abschange
+							}
+						else if (percchange < 0 && abschange < 0){
+						 document.getElementById("percchange").innerHTML = "-"+percchange;
+					     	 document.getElementById("abschange").innerHTML = "-"+abschange
+						}
+						else {
+						document.getElementById("percchange").innerHTML = percchange;
+					     	document.getElementById("abschange").innerHTML = abschange
+					}
+					}    
+					else
+			  		      console.error(error);
+					})
+
+				}
+			    else
+			        console.error(error);
+			})
+         	}    
+	else
+  	      console.error(error);
+	})
+
+
+	}
+    else
+        console.error(error);
+});
+
+ 
+myContractInstance.yes.call(function(error, result){
+    if(!error){
+        if (result.c[0] == 2){
+		document.getElementById("return").innerHTML = "Да, вы можете вывести деньги";
+		document.getElementById("buy").style.display = 'none';
+		document.getElementById("sell").style.display = 'inline'		
+	}
+	else if (result.c[0] == 1) {
+		document.getElementById("return").innerHTML = "Еще нет, период вывода денег еще не начался";
+		document.getElementById("buy").style.display = 'none';
+		document.getElementById("sell").style.display = 'none'
+	}
+
+	else {
+		document.getElementById("return").innerHTML = "Еще нет, период вывода денег еще не начался";
+		document.getElementById("buy").style.display = 'inline';
+		document.getElementById("sell").style.display = 'none'
+
+	}
+	}
+    else
+        console.error(error);
+})
+
+web3.eth.getAccounts(function(error, accounts) {
+    if(!error)	{
+	var account = accounts[0];
+	window.onkeyup = keyup;
+	var inputTextValue;
+
+	function keyup(e) {
+  		inputTextValue = e.target.value;
+  		if (e.keyCode == 13) {
+			myContractInstance.yes.call(function(error, result){
+    			if(!error){
+        			if (result.c[0] == 0){
+					web3.eth.sendTransaction({from:account,to:myContractInstance.address, value:web3.toWei(e.target.value, "ether")}, function(error, result){
+    						if(!error)
+							console.log('success');
+						else 
+							console.error(error);
+ 					})
+				} 
+				else if (result.c[0] == 2){
+					myContractInstance.withdrawTokens(e.target.value, function(error, result){
+  	  					if(!error)
+							console.log('success');
+						else 
+							console.error(error);
+ 						})
+					}
+
+  				}
+    			else
+        			console.error(error);
+			})
+	}	
+	}	
+	}
+	else
+		console.error(error);
+})
+
+	</script>
+
+
+</head>
+<body>
+	<div class="header">
+		<a href="#"><div class="logo"></div></a>
+		<a href="#"><div class="lang">English</div></a>
+		<ul>
+			<li class="tel"></li>
+			<li class="mail"></li>
+		</ul>
+	</div>
+	<div class="main">
+		<div class="right-block">
+			<span>Ваш кошелек</span>
+			<form action="" method="">
+				<label for="name">Введите ключ</label>
+	      		<input class="key" type="text" value="" name="key" required>
+	      		<input class="submit" type="submit" value="" type="text">
+	      	</form>
+			<p>У вас нет кошелька?</p>
+			<a href="#"><div class="create">Создать</div></a>
+
+		</div>
+		<div class="left-block">
+			<ul>
+				<li class="e-wallet">
+					<div class="first"><a href="#">Ввод секретного</br> ключа своего кошелька</a></div>
+				</li>
+				<li class="bitcoin">
+					<div class="second"><a href="#">Количество вложенной</br> криптовалюты</a></div>
+				</li>
+				<li class="price">
+					<div class="first"><a href="#">Цена пая при покупке</a></div>	
+				</li>
+				<li class="current-price">
+					<div class="second"><a href="#">Текущая цена пая</a></div>	
+				</li>
+				<li class="percent">
+					<div class="first"><a href="#">Процентное изменение</br> инвестиций</a></div>	
+				</li>
+				<li class="change">
+					<div class="second"><a href="#">Абсолютное изменение</br> инвестиций в долларах</a></div>
+				</li>
+			</ul>
+
+
+		</div>
+
+
+	</div>
+
+
+<div id = "buy">
+			<label for="name">Введите количество эфира для покупки токенов (<span id = "ratenow_in"></span> токенов за 1 эфир):</label>
+	      		<input class="key" type="text" value="" name="key">
+	 
+</div>
+<p> Количество токенов: <span id = "balance"></span> </p> 
+
+
+<p> Текущая цена 1 токена: <span id = "pricenow"></span> эф.</p> 
+
+<p> Исходная цена 1 токена: <span id = "inprice"></span> эф.</p> 
+
+<p> Исходная цена пая: <span id = "wholeinprice"></span></p> 
+
+<p> Текущая цена пая: <span id = "wholepricenow"></span></p> 
+
+
+
+<p> Процентное изменение инвестиции: <span id = "percchange"></span>%</p> 
+
+<p> Абсолютное изменение инвестиции: <span id = "abschange"></span></p> 
+
+<p> Возможен возврат? <span id = "return"></span> </p>
+
+<div id="sell">
+			<label for="name">Введите количество токенов для возврата (1 эфир = <span id = "ratenow_out"></span> токенов):</label>
+	      		<input class="key" type="text" value="" name="key">
+
+
+</div>
+
+
+fdfjd
+<div style="width: 50px; height: 50px; border-radius: 50px;"></div>
+
+</body>

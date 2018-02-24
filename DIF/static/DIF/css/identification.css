@@ -1,0 +1,227 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+html {
+	font-family: Verdana;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 84.2vw;
+	margin-left: 7.9vw;
+	float: left;
+}
+
+.header {
+	height: 27.3vh;
+}
+
+.logo {
+	margin-top: 0.5vh;
+	background: url(../img/logo.png) no-repeat;
+	height: 7.1vh;
+	width: 11vw;
+	background-size: 100%;
+	display: inline-block;
+	float: left;
+}
+
+.top-menu {
+	height: 10.7vh;
+	width: 55vw;
+	display: inline;
+	float: left;
+}
+
+.top-menu ul {
+	width: 56vw;
+	display: inline-flex;
+	justify-content: space-around;
+	margin-top: 7.4vh;
+}
+
+.top-menu a {
+	font-size: 1.3vw;
+	color: black;
+	border-bottom: 1px solid #999999;
+	padding: 0 0.5vw;
+}
+
+.side-menu {
+	display: inline-block;
+	width: 16.46vw;
+	margin-top: 0.95vh;
+	float: right;
+}
+
+.side-menu ul li {
+	width: 16.46vw;
+	height: 5.3vh;
+	border: 0.17vh solid #274c91;
+	border-radius: 5px;
+	margin-bottom: 1.47vh;
+	text-align: center;
+	padding-top: 1.7vh;
+}
+
+li.exit {
+	background: #274c91;
+}
+
+.side-menu a {
+	font-size: 1.3vw;
+	color: black;
+}
+
+a.exit {
+	color: white;
+	font-weight: bold;	
+}
+
+.lang {
+	width: 4vw;
+	height: 14.2vh;
+	float: right;
+	margin-left: 2vw;
+	margin-top: 0.76vh;
+}
+
+.rus {
+	width: 3.29vw;
+	height: 4.1vh;
+	background: url(../img/rus.png) no-repeat;	
+	margin-bottom: 0.9vh;
+	background-size: 100%;
+}
+
+.eng {
+	width: 3.29vw;
+	height: 4.1vh;
+	background: url(../img/eng.png) no-repeat;	
+	margin-bottom: 0.9vh;
+	background-size: 100%;
+}
+
+.chi {
+	width: 3.29vw;
+	height: 4.1vh;
+	background: url(../img/chi.png) no-repeat;	
+	background-size: 100%;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 2vw;
+	text-align: center;
+}
+
+.important {
+	height: 13.3vh;
+	background: #dcdcdc;
+	margin-top: 2vh;
+	font-size: 1.4vw;
+	padding-top: 0.8vh;
+}
+
+.main {
+	height: 76.47vh;
+	font-size: 1.4vw;
+	background: url(../img/id-background.png) 50% 50% no-repeat;
+	background-size: 12%;
+}
+
+.main p {
+	margin-top: 4.5vh;
+}
+
+ol {
+	margin-top: 6.9vh;
+	margin-bottom: 12vh;
+}
+
+ol li {
+	margin-bottom: 9vh;
+	margin-left: 1.7vw;
+}
+
+ol span {
+	text-transform: uppercase;
+}
+
+form {
+	width: 72.23vw;
+	margin: 0 auto 7.5vh auto;
+	text-align: center;
+}
+
+.photo {
+	width: 41vw;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.photo input {
+	height: 4.9vh;
+	width: 20vw;
+	font-size: 1.2vw;
+	border: 1px solid #c4c4c4;
+	border-radius: 0.43vh;
+	margin-bottom: 7.35vh;
+	margin-left: 0.5vw;
+}
+
+.attention {
+	height: 11.6vh;
+	width: 72.23vw;
+	margin: 0 auto;
+	text-align: center;
+	border-bottom: 0.8vh solid #d0d0d0;
+	border-top: 0.8vh solid #d0d0d0;
+	padding: 8px 0;
+	margin-bottom: 3.97vh;
+}	
+
+.attention span {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+form a {
+	color: #5d88d8;
+}
+
+.check {
+	text-align: center;
+}
+
+.check input {
+	margin-right: 0.5vw; 
+}
+
+
+input[type="submit"] {
+	height: 8.65vh;
+	width: 27vw;
+	margin: 3.9vh 0 4vh 0;
+	background: #344e80;
+	font-size: 1.2vw;
+	cursor: pointer;
+	font-weight: bold;
+	color: white;
+	font-size: 1.4vw;
+	border: none;
+}
+
+
+
+
+

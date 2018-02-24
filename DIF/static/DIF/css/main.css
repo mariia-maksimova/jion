@@ -1,0 +1,621 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+html {
+	font-family: Verdana;
+}
+
+
+
+.front {
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	background: url(../img/main-background.png) no-repeat 0 15.3%;
+	background-size: cover;
+	margin-bottom: 2.7vh;
+}
+
+.container {
+	width: 85%;
+	height: 79.5%;
+	margin-left: 7.8%;
+	display: inline-block;
+}	
+
+.top-menu {
+	height: 5.7vh;
+	width: 84.1vw;
+}
+
+.top-menu ul {
+	width: 81.3%;
+	height: 5.7vh;
+	display: inline-flex;
+	justify-content: space-around;
+}
+
+.top-menu ul li {
+	margin-top: 1.53vh;
+	border-bottom: 0.1529vh solid #b8b8b8;
+	padding: 0vh 0.5% 0.76vh 0.5%;
+	font-size: 1.17vw;
+}
+
+.top-menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.personal-account {
+	width: 17.7%;
+	height: 4vh;
+	background: #274c91;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	float: right; 
+	margin-top: 1vh;
+	padding-top: 0.9vh;
+	font-size: 1.17vw;
+}
+
+.Logo3 {
+	height: 5vh;
+	width: 8vw;
+	display: inline-block;
+	background: url(../img/Logo3.png) no-repeat;
+
+}
+
+.logo {
+	width: 22.9vw;
+	height: 12.23vh;
+	background: url(../img/logo-main.png) no-repeat;
+	background-size: 75%;
+	margin: 6.4vh auto 5vh auto;
+}
+
+
+.front p {
+	font-size: 1.39vw;
+	margin-bottom: 3vh;
+}
+
+.front span {
+	font-weight: bold;
+}
+
+.jion {
+	color: #022c78;
+}
+
+.lang {
+	width: 4.1vw;
+	height: 14.2vh;
+	float: right;
+	margin-right: 2.2vw;
+	margin-top: 0.76vh;
+}
+
+.rus {
+	width: 3.29vw;
+	height: 4.1vh;
+	background: url(../img/rus.png) no-repeat;	
+	margin-bottom: 0.9vh;
+	background-size: 100%;
+}
+
+.eng {
+	width: 3.29vw;
+	height: 4.1vh;
+	background: url(../img/eng.png) no-repeat;	
+	margin-bottom: 0.9vh;
+	background-size: 100%;
+}
+
+.chi {
+	width: 3.29vw;
+	height: 4.1vh;
+	background: url(../img/chi.png) no-repeat;	
+	background-size: 100%;
+}
+
+.indexes {
+	height: 20.3vh;
+	width: 100%;
+	background: url(../img/indexes.png) no-repeat;
+	background-size: 100%;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.76vw;
+	text-align: center;
+}
+
+.indexes p {
+	font-size: 1.6vw;
+}
+
+.white-line {
+	height: 0.76vh;
+	width: 15.2vw;
+	background: white;
+	margin: 0.76vh auto;
+}
+
+/* Dinamics */
+
+.dinamics {
+	height: 100vh;
+	width: 100%;
+	margin-bottom: 2vh;
+}
+
+.dinamics h2, .current h2, .historic h2, .investment h2 {
+	text-align: center;
+	margin-top: 5vh;
+	font-weight: normal;
+	font-size: 2vw;
+}
+
+a.invest {
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	font-size: 3.3vh;
+	text-align: center;
+}
+
+.graph {
+	margin-top: 14.6vh;
+	height: 53.9vh;	
+	width: 62.3vw;
+	border: 1px solid red;
+}
+
+.invest {
+	height: 6.6vh;
+	width: 34vw;
+	background: #274c91;
+	margin: 6.2vh auto 0 auto;
+	padding-top: 1.6vh;
+}	
+
+/* Current */
+
+.current, .historic, .investment {
+	height: 100vh;
+	width: 100%;
+}
+
+.current p, .historic p {
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+.current span {
+	color: #656565;
+}
+
+.current li, .historic li {
+	width: 7.8vw;
+	height: 15.1vh;
+	font-size: 1.5vw;
+	padding-left: 7vw;
+	margin-bottom: 2.2vh;
+}	
+
+.current ul, .historic ul {
+	display: inline-block;
+	margin-top: 7vh;
+	margin-left: 2.6vw;
+}
+
+.left {
+	display: inline-block;
+	float: left;
+	margin-right: 15vw;
+}
+
+.middle {
+	margin-right: 15vw;
+}
+
+.value {
+	font-size: 2vw;
+	font-weight: bold;
+	margin-bottom: 1vh;
+	padding-top: 1.3vh;
+}
+
+.load {
+	height: 8vh;
+	width: 4.5vw;
+	background: url(../img/load.png) no-repeat;
+	background-size: 80%;
+}
+
+.bitcoin {
+	background: url(../img/bitcoin.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.nem {
+	background: url(../img/nem.png) no-repeat;
+	background-size: 40%;
+}
+
+.dash {
+	background: url(../img/dash.png) no-repeat 0 20%;
+	background-size: 40%
+}
+
+.pivx {
+	background: url(../img/pivx.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.litecoin {
+	background: url(../img/litecoin.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.decred {
+	background: url(../img/decred.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.dogecoin {
+	background: url(../img/dogecoin.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.monero {
+	background: url(../img/monero.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.ethereum {
+	background: url(../img/ethereum.png) no-repeat 10% 20%;
+	background-size: 25%;
+}
+
+.zcash {
+	background: url(../img/zcash.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.ethereum-classic {
+	background: url(../img/ethereum-classic.png) no-repeat 0 20%;
+	background-size: 40%;
+}
+
+.reserved {
+	visibility: hidden;
+}
+
+/* Historic */
+
+.period {
+	font-size: 1.5vw;
+	margin-top: 6vh;
+}
+
+.historic select {
+	width: 27vw;
+	height: 4.5vh;
+	margin-left: 1vw;
+	border: 0.1vw solid #c7c7c7;
+	border-right: none;
+	border-radius: 0.5vh;
+}
+
+/* Investment */
+
+.investment p {
+	margin-top: 5vh;
+	font-size: 1.5vw;
+}
+
+.scheme {
+	height: 57vh;
+	background: url(../img/investment-background.png) no-repeat;
+	background-size: 100%;
+	font-size: 1.5vw;
+}
+
+.first {
+	padding-top: 30vh;
+	width: 20vw;
+	transform-origin: 26% 100%;
+	transform: rotate(-90deg);
+}
+
+.second {
+	padding-top: 55vh;
+	width: 24vw;
+	transform-origin: 0 32%;
+	transform: rotate(-90deg);
+	text-align: center;
+	float: left;
+}
+
+.second span, .third span, .fifth span {
+	font-weight: bold;
+}
+
+.management-fee {
+	width: 12vw;
+	text-align: center;
+	margin-top: 6vh;
+	border: 0.09vh solid #274c91;
+	display: inline;
+	position: absolute;
+	left: 30vw;
+	padding: 0.2vw;
+	float: left;
+}
+
+.third {
+	text-align: center;
+	width: 32vw;
+	display: inline-block;
+	transform-origin: 40% 0%;
+	transform: rotate(-90deg);
+	float: left;
+}
+
+.fourth {
+	width: 27vw;
+	display: inline-block;
+	text-align: center;
+	margin-left: 25.5vw;
+	transform-origin: 17% 0%;
+	transform: rotate(-90deg);
+}
+
+.success-fee {
+	width: 12vw;
+	text-align: center;
+	border: 0.09vh solid #274c91;
+	display: inline;
+	position: absolute;
+	top: 468vh;
+	right: 20.5vw;
+	padding: 0.2vw;
+}
+
+.fifth {
+	width: 30vw;
+	display: inline-block;
+	text-align: center;
+	transform-origin: 20% 0%;
+	transform: rotate(-90deg);
+	position: absolute;
+	right: -6vw;
+}
+
+/* Premiun */
+
+.premium {
+	height: 100vh;
+	background: url(../img/premium.png) no-repeat;
+	background-size: 100%;
+	margin-bottom: 2.8vh;
+}
+
+.premium h2 {
+	text-align: center;
+	margin-top: 5vh;
+	font-weight: normal;
+	font-size: 2vw;
+	color: white;
+	margin-bottom: 6vh;
+}	
+
+.premium p {
+	color: white;
+	margin-bottom: 3vh;
+	font-size: 1.5vw;
+}
+
+.premium span {
+	font-weight: bold;
+}
+
+.premium form {
+	margin: 5vh auto 0 auto;
+	width: 71vw;
+	color: white;
+	font-size: 1.7vw;
+}
+
+.input-left {
+	display: inline-block;
+	float: left;
+}
+
+label {
+	display: block;
+	margin-bottom: 1.6vh;
+}
+
+input[type="text"], input[type="email"] {
+	width: 31.4vw;
+	height: 6.3vh;
+	background: transparent;
+	border: 0.09vh solid white;
+	border-radius: 0.5vw;
+	color: white;
+	font-size: 1.5vw;
+	padding-left: 0.2vw;
+	margin: 0 2.6vw 4.4vh 0.88vw;
+}
+
+p.note {
+	text-align: center;
+	font-size: 1.3vw;
+}
+
+input[type="submit"] {
+	color: white;
+	height: 10vh;
+	width: 34.9vw;
+	background: #274c91;
+	border: none;
+	font-size: 1.7vw;
+	font-weight: bold;	
+	cursor: pointer;
+	margin-left: 18vw;
+}
+
+/* News */
+
+.news {
+	height: 50vh;
+}
+
+.news h2, .contacts h2 {
+	text-align: center;
+	margin-top: 2vh;
+	font-weight: normal;
+	font-size: 2vw;
+}
+
+button.forward {
+	margin-top: 5vh;
+	height: 31vh;
+	width: 3vw;
+	background: url(../img/left-arrow.png) no-repeat;
+	background-size: 90%;
+	display: inline-block;
+	float: left;
+	border: none;
+	cursor: pointer;
+	margin-right: 16vw;
+}
+
+.post {
+	margin-top: 3vh;
+	margin-right: 3vw;
+	display: inline-block;
+	text-align: center;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 1.3vw;
+	margin: 2vh 0;
+}
+
+.picture {
+	height: 20vh;
+	width: 21vw;
+	border: 0.09vh solid black;
+}
+
+button.backwards {
+	margin-top: 5vh;
+	height: 31vh;
+	width: 3vw;
+	background: url(../img/right-arrow.png) no-repeat;
+	background-size: 90%;
+	display: inline-block;
+	float: right;
+	border: none;
+	cursor: pointer;
+}
+
+/* Team */
+
+.team {
+	height: 50vh;
+}
+
+.team h2 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 2vw;
+}
+
+#team {
+	width: 84vw;
+	display: inline-flex;
+	justify-content: space-between;
+	margin-top: 4vh;
+}
+
+#ceo, #developer, #analyst-first, #analyst-second {
+	height: 16.3vw;
+	width: 16.3vw;
+	text-align: center;
+	color: #585858;
+	padding-top: 26vh;
+}
+
+#team span {
+	font-weight: bold;
+	color: black;
+}
+
+#ceo {
+	background: url(../img/ceo.png) no-repeat;
+	background-size: 100%;
+}
+
+#developer, #analyst-first, #analyst-second {
+	background: url(../img/developer.png) no-repeat;
+	background-size: 100%;
+}
+
+/* Contacts */
+
+.contacts {
+	height: 100vh;
+}
+
+.contacts p {
+	margin-bottom: 4vh;
+	font-size: 1.5vw;
+}
+
+.telegram {
+	width: 18.5vw;
+	height: 11vh;
+	background: url(../img/telegram.png) no-repeat 0 1vh;
+	background-size: 20%;
+	padding-left: 5.5vw;
+	margin-left: 1vw;
+	margin-top: 3vh;
+}
+
+.mail {
+	width: 18.5vw;
+	height: 7.6vh;
+	background: url(../img/e-mail.png) no-repeat 0 1vh;
+	background-size: 20%;
+	padding-left: 5.5vw;
+	padding-top: 3.5vh;
+	margin-left: 1vw;
+	margin-top: 1vh;
+	font-size: 1.5vw;
+}
+
+.rules {
+	margin-top: 3vh;
+	text-align: justify;
+	font-size: 0.8vw;
+}
+
+.footer {
+	text-align: center;
+	margin-bottom: 2vh;
+	font-size: 0.8vw;
+}
